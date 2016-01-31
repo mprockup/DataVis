@@ -15,14 +15,12 @@ class ViewController: UIViewController {
     var labelType: LabelType!
     var dataArray: DataArray!
     
-    
     var  scnView:SCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         loadDataFile()
         setupScene()
-
     }
     
 
@@ -60,6 +58,34 @@ class ViewController: UIViewController {
         }
         
     }
-
+    
+    override func touchesBegan(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+        
+        let touch:UITouch = (touches?.first)!
+        let loc:CGPoint = touch.locationInView(self.view)
+        let results:[SCNHitTestResult] = scnView.hitTest(loc, options: nil)
+        
+        if (results.count > 0) {
+            let node:SCNNode = results[0].node
+            print(node)
+            let ex:Example = dataArray.nodeToExampleDict[node]!
+            print("Example with (x, y, z, label) = (", ex.x, ", ", ex.y, ", ", ex.z, ", ", ex.label, ")");
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

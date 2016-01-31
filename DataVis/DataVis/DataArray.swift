@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SceneKit
 
 public enum LabelType {
     case Categorical
@@ -21,6 +22,7 @@ public class DataArray {
     var xName: String!
     var yName: String!
     var zName: String!
+    var nodeToExampleDict: [SCNNode:Example] = [:]
     
     public init(fromSpreadsheet fileURL: NSURL, delimiter: NSCharacterSet, labelType: LabelType) {
         
@@ -49,7 +51,7 @@ public class DataArray {
                     (line, stop) in lines.append(line)
             }
             
-            // Get feature and label names from first line
+            // Get feature and label names from first lined
             self.parseHeader(lines[0], delimiter: delimiter)
             
             // Create examples from each subsequent line

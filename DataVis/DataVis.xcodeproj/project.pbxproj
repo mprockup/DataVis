@@ -175,7 +175,7 @@
 				TargetAttributes = {
 					E7223E391C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = HFZ2D5NPX9;
+						DevelopmentTeam = 38UN2K8879;
 					};
 					E7223E4E1C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;

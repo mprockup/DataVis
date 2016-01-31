@@ -11,7 +11,6 @@ import SceneKit
 
 class DataScene: SCNScene {
     
-    
     let camera = SCNCamera()
     let cameraNode = SCNNode()
     var plotData:DataArray!
@@ -31,11 +30,12 @@ class DataScene: SCNScene {
     init(data:DataArray){
         super.init()
         plotData = data
-        for d:Example in plotData.examples{
+        for d:Example in plotData.examples {
             let sphereGeometry = SCNSphere(radius: 0.1)
             let sphereNode = SCNNode(geometry: sphereGeometry)
             sphereNode.position = SCNVector3(x:d.x, y: d.y, z: d.z)
             self.rootNode.addChildNode(sphereNode)
+            plotData.nodeToExampleDict[sphereNode] = d
         }
     }
     

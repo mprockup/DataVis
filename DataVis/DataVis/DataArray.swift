@@ -15,7 +15,7 @@ public enum LabelType {
 
 public class DataArray {
     
-    var examples: [Example] = []
+    public var examples: [Example] = []
     var labelType: LabelType
     var labelName: String!
     var xName: String!
@@ -72,22 +72,22 @@ public class DataArray {
     
     func addExampleFromLine(line: String, delimiter: NSCharacterSet) {
         let stringVals: [String] = line.componentsSeparatedByCharactersInSet(delimiter)
-        let ex = Example(x: Double(stringVals[0])!,
-            y: Double(stringVals[1])!,
-            z: Double(stringVals[2])!,
-            label: Double(stringVals[3])!)
+        let ex = Example(x:Float(stringVals[0])!,
+            y:Float(stringVals[1])!,
+            z:Float(stringVals[2])!,
+            label:Float(stringVals[3])!)
         examples.append(ex)
     }
 }
 
 public class Example {
     
-    var x = 0.0
-    var y = 0.0
-    var z = 0.0
-    var label = 0.0
+    public var x:Float = 0.0
+    public var y:Float = 0.0
+    public var z:Float = 0.0
+    public var label:Float = 0.0
     
-    public init(x: Double, y: Double, z: Double, label: Double) {
+    public init(x: Float, y: Float, z: Float, label: Float) {
         
         self.x = x;
         self.y = y;

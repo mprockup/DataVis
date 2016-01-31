@@ -11,16 +11,20 @@ import SceneKit
 
 class ViewController: UIViewController {
     
+    var delimiter: NSCharacterSet!
+    var labelType: LabelType!
+    var dataArray: DataArray!
+    
+    
     var  scnView:SCNView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        scnView = self.view as! SCNView
-        scnView.scene = PrimativeScene()
-        scnView.backgroundColor = UIColor.blackColor()
-        scnView.autoenablesDefaultLighting = true
-        scnView.allowsCameraControl = true
+        loadDataFile()
+        setupScene()
+
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -28,11 +32,34 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetCamera(sender: AnyObject) {
-        (scnView.scene as! PrimativeScene).resetCameraPostion()
+        (scnView.scene as! DataScene).resetCameraPostion()
     }
     
     
+    //SETUP THE SCENE
+    func setupScene(){
+        scnView = self.view as! SCNView
+        scnView.scene = DataScene(data: dataArray)
+        scnView.backgroundColor = UIColor.blackColor()
+        scnView.autoenablesDefaultLighting = true
+        scnView.allowsCameraControl = true
+    }
     
+    // LOAD DATA FILE
+    func loadDataFile(){
+        delimiter = NSCharacterSet(charactersInString: ",")
+        labelType = LabelType.Continuous
+        
+        if let csvURL = NSBundle.mainBundle().URLForResource("test", withExtension: "csv") {
+            if NSFileManager.defaultManager().fileExistsAtPath(csvURL.path!) {
+                
+                dataArray = DataArray(fromSpreadsheet: csvURL,
+                    delimiter: delimiter,
+                    labelType: labelType)
+            }
+        }
+        
+    }
 
 }
 

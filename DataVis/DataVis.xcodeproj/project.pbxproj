@@ -8,15 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1F569F561C5E5B1100CAE88D /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1F569F541C5E5B1100CAE88D /* test.csv */; };
-		1F569F581C5E68F900CAE88D /* DataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569F571C5E68F900CAE88D /* DataArray.swift */; };
 		E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */; };
 		E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E411C5E4E5600AACD81 /* ViewController.swift */; };
 		E7223E451C5E4E5600AACD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7223E431C5E4E5600AACD81 /* Main.storyboard */; };
 		E7223E471C5E4E5600AACD81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7223E461C5E4E5600AACD81 /* Images.xcassets */; };
 		E7223E4A1C5E4E5600AACD81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7223E481C5E4E5600AACD81 /* LaunchScreen.xib */; };
 		E7223E561C5E4E5600AACD81 /* DataVisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E551C5E4E5600AACD81 /* DataVisTests.swift */; };
+		E76424E81C5E904000B23673 /* DataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76424E71C5E904000B23673 /* DataArray.swift */; };
 		E7BDB4C31C5E679000A97170 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BDB4C21C5E679000A97170 /* SceneKit.framework */; };
-		E7BDB4C51C5E68A200A97170 /* PrimativeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDB4C41C5E68A200A97170 /* PrimativeScene.swift */; };
+		E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDB4C41C5E68A200A97170 /* DataScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +31,6 @@
 
 /* Begin PBXFileReference section */
 		1F569F541C5E5B1100CAE88D /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
-		1F569F571C5E68F900CAE88D /* DataArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArray.swift; sourceTree = "<group>"; };
 		E7223E3A1C5E4E5600AACD81 /* DataVis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataVis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7223E3E1C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,8 +41,9 @@
 		E7223E4F1C5E4E5600AACD81 /* DataVisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataVisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7223E541C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E551C5E4E5600AACD81 /* DataVisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVisTests.swift; sourceTree = "<group>"; };
+		E76424E71C5E904000B23673 /* DataArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArray.swift; sourceTree = "<group>"; };
 		E7BDB4C21C5E679000A97170 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
-		E7BDB4C41C5E68A200A97170 /* PrimativeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PrimativeScene.swift; path = ../PrimativeScene.swift; sourceTree = "<group>"; };
+		E7BDB4C41C5E68A200A97170 /* DataScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataScene.swift; path = ../DataScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +87,8 @@
 		E7223E3C1C5E4E5600AACD81 /* DataVis */ = {
 			isa = PBXGroup;
 			children = (
-				E7BDB4C41C5E68A200A97170 /* PrimativeScene.swift */,
+				E76424E71C5E904000B23673 /* DataArray.swift */,
+				E7BDB4C41C5E68A200A97170 /* DataScene.swift */,
 				E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */,
 				E7223E411C5E4E5600AACD81 /* ViewController.swift */,
 				E7223E431C5E4E5600AACD81 /* Main.storyboard */,
@@ -174,7 +175,7 @@
 				TargetAttributes = {
 					E7223E391C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 38UN2K8879;
+						DevelopmentTeam = HFZ2D5NPX9;
 					};
 					E7223E4E1C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
@@ -227,9 +228,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E7BDB4C51C5E68A200A97170 /* PrimativeScene.swift in Sources */,
+				E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */,
 				E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */,
 				E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */,
+				E76424E81C5E904000B23673 /* DataArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +365,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mprockup.DataVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};
@@ -376,6 +379,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mprockup.DataVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

@@ -9,15 +9,16 @@
 import UIKit
 import SceneKit
 
-class PrimativeScene: SCNScene {
+class DataScene: SCNScene {
     
     
     let camera = SCNCamera()
     let cameraNode = SCNNode()
+    var plotData:DataArray!
     
     override init() {
         super.init()
-        let sphereGeometry = SCNSphere(radius: 1.0)
+        let sphereGeometry = SCNSphere(radius: 0.1)
         let sphereNode = SCNNode(geometry: sphereGeometry)
         self.rootNode.addChildNode(sphereNode)
         
@@ -25,6 +26,17 @@ class PrimativeScene: SCNScene {
         let secondSphereNode = SCNNode(geometry: secondSphereGeometry)
         secondSphereNode.position = SCNVector3(x: 40.0, y: 0.0, z: 0.0)
         self.rootNode.addChildNode(secondSphereNode)
+    }
+    
+    init(data:DataArray){
+        super.init()
+        plotData = data
+        for d:Example in plotData.examples{
+            let sphereGeometry = SCNSphere(radius: 0.1)
+            let sphereNode = SCNNode(geometry: sphereGeometry)
+            sphereNode.position = SCNVector3(x:d.x, y: d.y, z: d.z)
+            self.rootNode.addChildNode(sphereNode)
+        }
     }
     
     func setCameraPostion(pos:SCNVector3)

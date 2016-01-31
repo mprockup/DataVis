@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F569F561C5E5B1100CAE88D /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1F569F541C5E5B1100CAE88D /* test.csv */; };
+		1F569F581C5E68F900CAE88D /* DataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F569F571C5E68F900CAE88D /* DataArray.swift */; };
 		E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */; };
 		E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E411C5E4E5600AACD81 /* ViewController.swift */; };
 		E7223E451C5E4E5600AACD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7223E431C5E4E5600AACD81 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F569F541C5E5B1100CAE88D /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		1F569F571C5E68F900CAE88D /* DataArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArray.swift; sourceTree = "<group>"; };
 		E7223E3A1C5E4E5600AACD81 /* DataVis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataVis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7223E3E1C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 		E7223E3D1C5E4E5600AACD81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1F569F541C5E5B1100CAE88D /* test.csv */,
 				E7223E3E1C5E4E5600AACD81 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -169,7 +174,7 @@
 				TargetAttributes = {
 					E7223E391C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = HFZ2D5NPX9;
+						DevelopmentTeam = 38UN2K8879;
 					};
 					E7223E4E1C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
@@ -203,6 +208,7 @@
 			files = (
 				E7223E451C5E4E5600AACD81 /* Main.storyboard in Resources */,
 				E7223E4A1C5E4E5600AACD81 /* LaunchScreen.xib in Resources */,
+				1F569F561C5E5B1100CAE88D /* test.csv in Resources */,
 				E7223E471C5E4E5600AACD81 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,9 +360,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -365,9 +373,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

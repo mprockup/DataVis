@@ -17,7 +17,7 @@ public enum LabelType {
 public class DataArray {
     
     public var examples: [Example] = []
-    var labelType: LabelType
+    public var labelType: LabelType
     var labelName: String!
     var xName: String!
     var yName: String!
@@ -96,6 +96,6 @@ public class Example {
         self.z = z;
         self.label = label;
         
-        print("Example with (x, y, z, label) = (", x, ", ", y, ", ", z, ", ", label, ")");
+//        print("Example with (x, y, z, label) = (", x, ", ", y, ", ", z, ", ", label, ")");
     }
 }

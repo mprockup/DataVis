@@ -30,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetCamera(sender: AnyObject) {
-        (scnView.scene as! DataScene).resetCameraPostion()
+        setupScene()
     }
     
     
@@ -45,10 +45,10 @@ class ViewController: UIViewController {
     
     // LOAD DATA FILE
     func loadDataFile(){
-        delimiter = NSCharacterSet(charactersInString: ",")
-        labelType = LabelType.Continuous
+        delimiter = NSCharacterSet(charactersInString: "\t")
+        labelType = LabelType.Categorical
         
-        if let csvURL = NSBundle.mainBundle().URLForResource("test", withExtension: "csv") {
+        if let csvURL = NSBundle.mainBundle().URLForResource("NMF_3_MELLIN_proj_42", withExtension: "tsv") {
             if NSFileManager.defaultManager().fileExistsAtPath(csvURL.path!) {
                 
                 dataArray = DataArray(fromSpreadsheet: csvURL,

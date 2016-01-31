@@ -17,14 +17,6 @@ class DataScene: SCNScene {
     
     override init() {
         super.init()
-        let sphereGeometry = SCNSphere(radius: 0.1)
-        let sphereNode = SCNNode(geometry: sphereGeometry)
-        self.rootNode.addChildNode(sphereNode)
-        
-        let secondSphereGeometry = SCNSphere(radius: 0.5)
-        let secondSphereNode = SCNNode(geometry: secondSphereGeometry)
-        secondSphereNode.position = SCNVector3(x: 40.0, y: 0.0, z: 0.0)
-        self.rootNode.addChildNode(secondSphereNode)
     }
     
     init(data:DataArray){
@@ -39,14 +31,14 @@ class DataScene: SCNScene {
         }
     }
     
+    func setPlotData(d:DataArray){
+        plotData = d
+    }
+    
     func setCameraPostion(pos:SCNVector3)
     {
 //        rootNode.position = pos
 //        cameraNode.position = pos
-    }
-    
-    func resetCameraPostion(){
-//        rootNode.position = SCNVector3(x: 0, y: 0, z: 0)
     }
     
     required init(coder aDecoder: NSCoder) {

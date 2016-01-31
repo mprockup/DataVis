@@ -15,6 +15,7 @@
 		E7223E4A1C5E4E5600AACD81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7223E481C5E4E5600AACD81 /* LaunchScreen.xib */; };
 		E7223E561C5E4E5600AACD81 /* DataVisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E551C5E4E5600AACD81 /* DataVisTests.swift */; };
 		E76424E81C5E904000B23673 /* DataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76424E71C5E904000B23673 /* DataArray.swift */; };
+		E76424EC1C5E96AF00B23673 /* FlatUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */; };
 		E7BDB4C31C5E679000A97170 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BDB4C21C5E679000A97170 /* SceneKit.framework */; };
 		E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDB4C41C5E68A200A97170 /* DataScene.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +43,7 @@
 		E7223E541C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E551C5E4E5600AACD81 /* DataVisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVisTests.swift; sourceTree = "<group>"; };
 		E76424E71C5E904000B23673 /* DataArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArray.swift; sourceTree = "<group>"; };
+		E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlatUIColor.swift; path = ../FlatUIColor.swift; sourceTree = "<group>"; };
 		E7BDB4C21C5E679000A97170 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		E7BDB4C41C5E68A200A97170 /* DataScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataScene.swift; path = ../DataScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +89,7 @@
 		E7223E3C1C5E4E5600AACD81 /* DataVis */ = {
 			isa = PBXGroup;
 			children = (
+				E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */,
 				E76424E71C5E904000B23673 /* DataArray.swift */,
 				E7BDB4C41C5E68A200A97170 /* DataScene.swift */,
 				E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */,
@@ -228,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76424EC1C5E96AF00B23673 /* FlatUIColor.swift in Sources */,
 				E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */,
 				E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */,
 				E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */,

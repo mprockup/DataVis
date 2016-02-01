@@ -8,6 +8,7 @@
 
 import UIKit
 import SceneKit
+import MediaPlayer
 
 class ViewController: UIViewController {
     
@@ -21,6 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         loadDataFile()
         setupScene()
+        getMedia()
     }
     
 
@@ -45,10 +47,10 @@ class ViewController: UIViewController {
     
     // LOAD DATA FILE
     func loadDataFile(){
-        delimiter = NSCharacterSet(charactersInString: "\t")
+        delimiter = NSCharacterSet(charactersInString: ",")
         labelType = LabelType.Categorical
         
-        if let csvURL = NSBundle.mainBundle().URLForResource("NMF_3_MELLIN_proj_42", withExtension: "tsv") {
+        if let csvURL = NSBundle.mainBundle().URLForResource("test", withExtension: "csv") {
             if NSFileManager.defaultManager().fileExistsAtPath(csvURL.path!) {
                 
                 dataArray = DataArray(fromSpreadsheet: csvURL,
@@ -56,7 +58,11 @@ class ViewController: UIViewController {
                     labelType: labelType)
             }
         }
+    }
+    
+    func getMedia() {
         
+  
     }
     
     override func touchesBegan(touches: Set<UITouch>?, withEvent event: UIEvent?) {
@@ -69,7 +75,22 @@ class ViewController: UIViewController {
             let node:SCNNode = results[0].node
             print(node)
             let ex:Example = dataArray.nodeToExampleDict[node]!
-            print("Example with (x, y, z, label) = (", ex.x, ", ", ex.y, ", ", ex.z, ", ", ex.label, ")");
+            print("Example with (x, y, z, label, title) = (", ex.x, ", ", ex.y, ", ", ex.z, ", ", ex.label, ",", ex.title, ")");
+            
+
+            let mediaItems = MPMediaQuery.songsQuery().items
+            for item in mediaItems! {
+                if (item.title == ex.title) {
+                    
+                    
+                    let player = MPMusicPlayerController.systemMusicPlayer()
+                    let coll:MPMediaItemCollection = MPMediaItemCollection.init(items: mediaItems!)
+                    player.setQueueWithItemCollection(coll)
+                    
+                    player.play()
+                }
+            }
+            
         }
     }
 }

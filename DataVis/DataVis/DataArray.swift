@@ -8,6 +8,7 @@
 
 import Foundation
 import SceneKit
+import MediaPlayer
 
 public enum LabelType {
     case Categorical
@@ -77,7 +78,8 @@ public class DataArray {
         let ex = Example(x:Float(stringVals[0])!,
             y:Float(stringVals[1])!,
             z:Float(stringVals[2])!,
-            label:Float(stringVals[3])!)
+            label:Float(stringVals[3])!,
+            title:stringVals[4])
         examples.append(ex)
     }
 }
@@ -88,14 +90,16 @@ public class Example {
     public var y:Float = 0.0
     public var z:Float = 0.0
     public var label:Float = 0.0
+    public var title:String = ""
     
-    public init(x: Float, y: Float, z: Float, label: Float) {
+    public init(x: Float, y: Float, z: Float, label: Float, title:String) {
         
         self.x = x;
         self.y = y;
         self.z = z;
         self.label = label;
+        self.title = title;
         
-//        print("Example with (x, y, z, label) = (", x, ", ", y, ", ", z, ", ", label, ")");
+        print("Example with (x, y, z, label) = (", x, ", ", y, ", ", z, ", ", label, ")");
     }
 }

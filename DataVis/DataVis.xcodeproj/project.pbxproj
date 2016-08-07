@@ -8,15 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1F569F5A1C5EAF9400CAE88D /* test.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1F569F591C5EAF9400CAE88D /* test.csv */; };
+		E7181C161D528C6C001EAC1D /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7181C151D528C6C001EAC1D /* LoadView.swift */; };
 		E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */; };
 		E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E411C5E4E5600AACD81 /* ViewController.swift */; };
 		E7223E451C5E4E5600AACD81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E7223E431C5E4E5600AACD81 /* Main.storyboard */; };
 		E7223E471C5E4E5600AACD81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7223E461C5E4E5600AACD81 /* Images.xcassets */; };
 		E7223E4A1C5E4E5600AACD81 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E7223E481C5E4E5600AACD81 /* LaunchScreen.xib */; };
 		E7223E561C5E4E5600AACD81 /* DataVisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7223E551C5E4E5600AACD81 /* DataVisTests.swift */; };
-		E76424E81C5E904000B23673 /* DataArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76424E71C5E904000B23673 /* DataArray.swift */; };
+		E761096F1D4FDD9000727EA8 /* Dataset.swift in Sources */ = {isa = PBXBuildFile; fileRef = E761096E1D4FDD9000727EA8 /* Dataset.swift */; };
+		E76109711D52320100727EA8 /* Colormap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76109701D52320100727EA8 /* Colormap.swift */; };
+		E76109741D5245D200727EA8 /* colormapTest.tsv in Resources */ = {isa = PBXBuildFile; fileRef = E76109731D5245D200727EA8 /* colormapTest.tsv */; };
+		E76109761D524A0000727EA8 /* default.tsv in Resources */ = {isa = PBXBuildFile; fileRef = E76109751D524A0000727EA8 /* default.tsv */; };
 		E76424EC1C5E96AF00B23673 /* FlatUIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */; };
 		E76424F01C5E9ED200B23673 /* NMF_3_MELLIN_proj_42.tsv in Resources */ = {isa = PBXBuildFile; fileRef = E76424EF1C5E9ED200B23673 /* NMF_3_MELLIN_proj_42.tsv */; };
+		E7AAC9621D539A1E00D33335 /* InfoPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7AAC9611D539A1E00D33335 /* InfoPopoverViewController.swift */; };
+		E7AAC9641D53C78100D33335 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7AAC9631D53C78100D33335 /* AVFoundation.framework */; };
 		E7BDB4C31C5E679000A97170 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7BDB4C21C5E679000A97170 /* SceneKit.framework */; };
 		E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BDB4C41C5E68A200A97170 /* DataScene.swift */; };
 /* End PBXBuildFile section */
@@ -33,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		1F569F591C5EAF9400CAE88D /* test.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.csv; sourceTree = "<group>"; };
+		E7181C151D528C6C001EAC1D /* LoadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		E7223E3A1C5E4E5600AACD81 /* DataVis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DataVis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7223E3E1C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,9 +50,14 @@
 		E7223E4F1C5E4E5600AACD81 /* DataVisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataVisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7223E541C5E4E5600AACD81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E7223E551C5E4E5600AACD81 /* DataVisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataVisTests.swift; sourceTree = "<group>"; };
-		E76424E71C5E904000B23673 /* DataArray.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataArray.swift; sourceTree = "<group>"; };
+		E761096E1D4FDD9000727EA8 /* Dataset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Dataset.swift; path = ../Dataset.swift; sourceTree = "<group>"; };
+		E76109701D52320100727EA8 /* Colormap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colormap.swift; sourceTree = SOURCE_ROOT; };
+		E76109731D5245D200727EA8 /* colormapTest.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = colormapTest.tsv; sourceTree = "<group>"; };
+		E76109751D524A0000727EA8 /* default.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = default.tsv; sourceTree = "<group>"; };
 		E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FlatUIColor.swift; path = ../FlatUIColor.swift; sourceTree = "<group>"; };
 		E76424EF1C5E9ED200B23673 /* NMF_3_MELLIN_proj_42.tsv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NMF_3_MELLIN_proj_42.tsv; sourceTree = "<group>"; };
+		E7AAC9611D539A1E00D33335 /* InfoPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPopoverViewController.swift; sourceTree = "<group>"; };
+		E7AAC9631D53C78100D33335 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E7BDB4C21C5E679000A97170 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		E7BDB4C41C5E68A200A97170 /* DataScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataScene.swift; path = ../DataScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -55,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AAC9641D53C78100D33335 /* AVFoundation.framework in Frameworks */,
 				E7BDB4C31C5E679000A97170 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +85,7 @@
 		E7223E311C5E4E5600AACD81 = {
 			isa = PBXGroup;
 			children = (
+				E7AAC9631D53C78100D33335 /* AVFoundation.framework */,
 				E7BDB4C21C5E679000A97170 /* SceneKit.framework */,
 				E7223E3C1C5E4E5600AACD81 /* DataVis */,
 				E7223E521C5E4E5600AACD81 /* DataVisTests */,
@@ -91,11 +105,13 @@
 		E7223E3C1C5E4E5600AACD81 /* DataVis */ = {
 			isa = PBXGroup;
 			children = (
-				E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */,
-				E76424E71C5E904000B23673 /* DataArray.swift */,
+				E76109721D52321A00727EA8 /* ColorUtils */,
+				E761096B1D4FDD5D00727EA8 /* Data */,
+				E761096A1D4FDD4E00727EA8 /* OldData */,
 				E7BDB4C41C5E68A200A97170 /* DataScene.swift */,
 				E7223E3F1C5E4E5600AACD81 /* AppDelegate.swift */,
 				E7223E411C5E4E5600AACD81 /* ViewController.swift */,
+				E7181C151D528C6C001EAC1D /* LoadView.swift */,
 				E7223E431C5E4E5600AACD81 /* Main.storyboard */,
 				E7223E461C5E4E5600AACD81 /* Images.xcassets */,
 				E7223E481C5E4E5600AACD81 /* LaunchScreen.xib */,
@@ -107,6 +123,8 @@
 		E7223E3D1C5E4E5600AACD81 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E76109731D5245D200727EA8 /* colormapTest.tsv */,
+				E76109751D524A0000727EA8 /* default.tsv */,
 				1F569F591C5EAF9400CAE88D /* test.csv */,
 				E76424EF1C5E9ED200B23673 /* NMF_3_MELLIN_proj_42.tsv */,
 				E7223E3E1C5E4E5600AACD81 /* Info.plist */,
@@ -129,6 +147,31 @@
 				E7223E541C5E4E5600AACD81 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E761096A1D4FDD4E00727EA8 /* OldData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = OldData;
+			sourceTree = "<group>";
+		};
+		E761096B1D4FDD5D00727EA8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E761096E1D4FDD9000727EA8 /* Dataset.swift */,
+				E7AAC9611D539A1E00D33335 /* InfoPopoverViewController.swift */,
+			);
+			name = Data;
+			sourceTree = "<group>";
+		};
+		E76109721D52321A00727EA8 /* ColorUtils */ = {
+			isa = PBXGroup;
+			children = (
+				E76424EB1C5E96AF00B23673 /* FlatUIColor.swift */,
+				E76109701D52320100727EA8 /* Colormap.swift */,
+			);
+			name = ColorUtils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,7 +224,7 @@
 				TargetAttributes = {
 					E7223E391C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = 38UN2K8879;
+						DevelopmentTeam = HFZ2D5NPX9;
 					};
 					E7223E4E1C5E4E5600AACD81 = {
 						CreatedOnToolsVersion = 6.4;
@@ -213,8 +256,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E76109761D524A0000727EA8 /* default.tsv in Resources */,
 				E7223E451C5E4E5600AACD81 /* Main.storyboard in Resources */,
 				E76424F01C5E9ED200B23673 /* NMF_3_MELLIN_proj_42.tsv in Resources */,
+				E76109741D5245D200727EA8 /* colormapTest.tsv in Resources */,
 				1F569F5A1C5EAF9400CAE88D /* test.csv in Resources */,
 				E7223E4A1C5E4E5600AACD81 /* LaunchScreen.xib in Resources */,
 				E7223E471C5E4E5600AACD81 /* Images.xcassets in Resources */,
@@ -235,11 +280,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7AAC9621D539A1E00D33335 /* InfoPopoverViewController.swift in Sources */,
 				E76424EC1C5E96AF00B23673 /* FlatUIColor.swift in Sources */,
+				E761096F1D4FDD9000727EA8 /* Dataset.swift in Sources */,
+				E76109711D52320100727EA8 /* Colormap.swift in Sources */,
 				E7BDB4C51C5E68A200A97170 /* DataScene.swift in Sources */,
 				E7223E421C5E4E5600AACD81 /* ViewController.swift in Sources */,
+				E7181C161D528C6C001EAC1D /* LoadView.swift in Sources */,
 				E7223E401C5E4E5600AACD81 /* AppDelegate.swift in Sources */,
-				E76424E81C5E904000B23673 /* DataArray.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -356,7 +404,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -372,6 +420,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mprockup.DataVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -386,6 +435,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = DataVis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mprockup.DataVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";

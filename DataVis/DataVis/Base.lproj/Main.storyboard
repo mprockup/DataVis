@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -18,27 +17,76 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-BT-Bvb">
-                                <rect key="frame" x="541" y="550" width="39" height="30"/>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="ETb-SH-u9q">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFw-BT-Bvb">
+                                <rect key="frame" x="530" y="530" width="50" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="39" id="I8j-j0-rlV"/>
-                                    <constraint firstAttribute="height" constant="30" id="InF-pQ-0pB"/>
+                                    <constraint firstAttribute="width" constant="50" id="8A2-bX-Yyd"/>
+                                    <constraint firstAttribute="height" constant="50" id="OaC-tX-NR2"/>
                                 </constraints>
-                                <state key="normal" title="Reset"/>
+                                <state key="normal" image="reset"/>
                                 <connections>
-                                    <action selector="resetCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4bf-Vv-qBQ"/>
+                                    <action selector="resetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gRd-eW-Q6w"/>
                                 </connections>
+                            </button>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" semanticContentAttribute="spatial" preferredRenderingAPI="1" translatesAutoresizingMaskIntoConstraints="NO" id="dlN-xo-XVO">
+                                <rect key="frame" x="0.0" y="400" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Ffj-x8-PMc"/>
+                                    <constraint firstAttribute="width" constant="200" id="JqD-pN-pgT"/>
+                                </constraints>
+                            </sceneKitView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jcu-O5-Tuj">
+                                <rect key="frame" x="20" y="20" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1F7-fX-2Uu"/>
+                                    <constraint firstAttribute="width" constant="50" id="k2s-cw-GfK"/>
+                                </constraints>
+                                <state key="normal" image="load"/>
+                                <connections>
+                                    <action selector="loadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Vsb-1j-Rq5"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhc-oE-H7D">
+                                <rect key="frame" x="550" y="28" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="4Vp-wY-4lF"/>
+                                    <constraint firstAttribute="height" constant="30" id="snw-fB-63y"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="settings"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VFw-BT-Bvb" secondAttribute="bottom" constant="20" id="PcJ-am-HUD"/>
-                            <constraint firstItem="VFw-BT-Bvb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="udM-J7-PfF"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ETb-SH-u9q" secondAttribute="bottom" id="8T7-VU-y4h"/>
+                            <constraint firstItem="jcu-O5-Tuj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="9mN-k7-lCa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ETb-SH-u9q" secondAttribute="trailing" constant="-20" id="Aw6-uI-Nl9"/>
+                            <constraint firstItem="jcu-O5-Tuj" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Q6Y-Pq-o0g"/>
+                            <constraint firstItem="dlN-xo-XVO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="aPw-gd-lHK"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VFw-BT-Bvb" secondAttribute="bottom" constant="20" id="fSc-Pg-XFX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dlN-xo-XVO" secondAttribute="bottom" id="gE9-nH-DUA"/>
+                            <constraint firstItem="ETb-SH-u9q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="jBr-tS-HvB"/>
+                            <constraint firstItem="ETb-SH-u9q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="lQC-jQ-ZBt"/>
+                            <constraint firstItem="VFw-BT-Bvb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nO5-uc-VWy"/>
+                            <constraint firstItem="Lhc-oE-H7D" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="nhu-aK-ecf"/>
+                            <constraint firstItem="Lhc-oE-H7D" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="vG4-rC-rks"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="previewView" destination="dlN-xo-XVO" id="JhJ-yv-IBU"/>
+                        <outlet property="scnView" destination="ETb-SH-u9q" id="Ql7-3e-dvM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="294" y="11"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="load" width="512" height="512"/>
+        <image name="reset" width="300" height="300"/>
+        <image name="settings" width="256" height="256"/>
+    </resources>
 </document>

@@ -10,20 +10,16 @@ import Foundation
 import SceneKit
 import MediaPlayer
 
-public enum LabelType {
-    case Categorical
-    case Continuous
-}
 
 public class DataArray {
     
-    public var examples: [Example] = []
+    public var examples: [ExampleXYZ] = []
     public var labelType: LabelType
     var labelName: String!
     var xName: String!
     var yName: String!
     var zName: String!
-    var nodeToExampleDict: [SCNNode:Example] = [:]
+    var nodeToExampleDict: [SCNNode:ExampleXYZ] = [:]
     
     public init(fromSpreadsheet fileURL: NSURL, delimiter: NSCharacterSet, labelType: LabelType) {
         
@@ -34,7 +30,7 @@ public class DataArray {
             labelType: self.labelType)
     }
     
-    subscript(index: Int) -> Example {
+    subscript(index: Int) -> ExampleXYZ {
         get { return examples[index] }
         set(newValue) { examples[index] = newValue }
     }
@@ -75,7 +71,7 @@ public class DataArray {
     
     func addExampleFromLine(line: String, delimiter: NSCharacterSet) {
         let stringVals: [String] = line.componentsSeparatedByCharactersInSet(delimiter)
-        let ex = Example(x:Float(stringVals[0])!,
+        let ex = ExampleXYZ(x:Float(stringVals[0])!,
             y:Float(stringVals[1])!,
             z:Float(stringVals[2])!,
             label:Float(stringVals[3])!,
@@ -84,7 +80,7 @@ public class DataArray {
     }
 }
 
-public class Example {
+public class ExampleXYZ {
     
     public var x:Float = 0.0
     public var y:Float = 0.0

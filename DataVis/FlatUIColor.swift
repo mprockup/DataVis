@@ -126,7 +126,7 @@ class FlatUIColor{
     
     class func getDifferentColors()->[UIColor]{
         let colors:[UIColor] = [
-            peterriverColor(),
+        peterriverColor(),
         alizarinColor(),
         emerlandColor(),
         carrotColor(),
@@ -136,8 +136,6 @@ class FlatUIColor{
         
         return colors;
     }
-    
-    
     
     class func colorFromHexString(hexStr:String, alpha:CGFloat = 1.0) -> UIColor {
         // Check for hash and remove the hash
@@ -176,4 +174,5 @@ class FlatUIColor{
             return UIColor.clearColor()
         }
     }
+    
 }

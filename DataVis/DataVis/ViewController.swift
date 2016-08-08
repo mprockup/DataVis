@@ -201,6 +201,8 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate, 
     
     var getDimsView:UIView!
     var userDims:[String]!
+    var dimSwitches:[UISwitch] = []
+    var dimLabels:[UILabel] = []
     func getDimsFromUser(){
         getDimsView = UIView(frame: view.frame)
        
@@ -218,28 +220,52 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate, 
         
         self.view.addSubview(getDimsView)
         
+        //Add a view for selection
         var selectorView = UIView()
         selectorView.frame = CGRectMake((self.view.frame.width-300)/2, (self.view.frame.height-400)/2, 300, 400)
         selectorView.backgroundColor = FlatUIColor.cloudsColor(0.8)
         selectorView.layer.cornerRadius = 10
         getDimsView.addSubview(selectorView)
         
+        //Add a scrollview for dim selection
         var scrollingSelector:UIScrollView = UIScrollView()
         scrollingSelector.frame = selectorView.frame
-        scrollingSelector.frame.origin.y = selectorView.frame.origin.y + 50
+        scrollingSelector.frame.origin = CGPoint(x: 0,y: 50)
         scrollingSelector.frame.size.height = selectorView.frame.height - 100
         selectorView.addSubview(scrollingSelector)
         
+        
+        //add switches for selecting dims to show
+        let rowHeight:CGFloat = 50
+        let switchWidth:CGFloat = 75
+        let viewWidth:CGFloat = scrollingSelector.frame.width
+        for i in 0..<(scnView.scene as! DataScene).plotData.header.count{
+            var s:UISwitch = UISwitch(frame:CGRectMake(20,CGFloat(i)*rowHeight + 10,75,rowHeight))
+            var l:UILabel = UILabel(frame:CGRectMake(switchWidth + 30 ,CGFloat(i)*rowHeight,viewWidth-switchWidth-40,rowHeight))
+            l.text = (scnView.scene as! DataScene).plotData.header[i]
+            l.textAlignment = .Left
+            scrollingSelector.addSubview(s)
+            scrollingSelector.addSubview(l)
+            dimSwitches.append(s)
+            dimLabels.append(l)
+        }
+        
+        var contentRect:CGRect = CGRectMake(0,0,0,0)
+        for view in scrollingSelector.subviews {
+            contentRect = CGRectUnion(contentRect, view.frame);
+        }
+        scrollingSelector.contentSize = contentRect.size
+        
+        //Add a title
         var titleLabel = UILabel()
         titleLabel.text = "Select Dimensions"
         titleLabel.frame = CGRectMake(0, 0, selectorView.frame.width, 50)
-        titleLabel.font = UIFont(
-            name: "Helvetica",
-            size: 24)
+        titleLabel.font = UIFont(name: "Helvetica",size: 24)
         titleLabel.textColor = FlatUIColor.wetasphaltColor()
         titleLabel.textAlignment = .Center
         selectorView.addSubview(titleLabel)
         
+        //Add a select UIButton
         var selectButton = UIButton()
         selectButton.setTitle("Select", forState: .Normal)
         selectButton.titleLabel!.font = UIFont(name: "Helvetica", size: 18)
@@ -249,6 +275,10 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate, 
         selectButton.addTarget(self, action: "selectDimsPressed", forControlEvents: .TouchUpInside)
         selectButton.backgroundColor = UIColor.clearColor()
         selectorView.addSubview(selectButton)
+        
+        
+        
+        
     }
     
     
@@ -260,6 +290,9 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate, 
     
     var getLabelView:UIView!
     var userLabelDim:String!
+    var labelSwitches:[UISwitch] = []
+    var labelLabels:[UILabel] = []
+    
     func getLabelsFromUser(){
         getLabelView = UIView(frame: view.frame)
         
@@ -277,17 +310,41 @@ class ViewController: UIViewController,UIPopoverPresentationControllerDelegate, 
         
         self.view.addSubview(getLabelView)
         
+        //Add a view for selection
         var selectorView = UIView()
         selectorView.frame = CGRectMake((self.view.frame.width-300)/2, (self.view.frame.height-400)/2, 300, 400)
         selectorView.backgroundColor = FlatUIColor.cloudsColor(0.8)
         selectorView.layer.cornerRadius = 10
         getLabelView.addSubview(selectorView)
         
+        //Add a scrollview for dim selection
         var scrollingSelector:UIScrollView = UIScrollView()
         scrollingSelector.frame = selectorView.frame
-        scrollingSelector.frame.origin.y = selectorView.frame.origin.y + 50
+        scrollingSelector.frame.origin = CGPoint(x: 0,y: 50)
         scrollingSelector.frame.size.height = selectorView.frame.height - 100
         selectorView.addSubview(scrollingSelector)
+        
+        //add switches for selecting dims to show
+        let rowHeight:CGFloat = 50
+        let switchWidth:CGFloat = 75
+        let viewWidth:CGFloat = scrollingSelector.frame.width
+        for i in 0..<(scnView.scene as! DataScene).plotData.header.count{
+            var s:UISwitch = UISwitch(frame:CGRectMake(20,CGFloat(i)*rowHeight + 10,75,rowHeight))
+            var l:UILabel = UILabel(frame:CGRectMake(switchWidth + 30 ,CGFloat(i)*rowHeight,viewWidth-switchWidth-40,rowHeight))
+            l.text = (scnView.scene as! DataScene).plotData.header[i]
+            l.textAlignment = .Left
+            scrollingSelector.addSubview(s)
+            scrollingSelector.addSubview(l)
+            labelSwitches.append(s)
+            labelLabels.append(l)
+        }
+        
+        var contentRect:CGRect = CGRectMake(0,0,0,0)
+        for view in scrollingSelector.subviews {
+            contentRect = CGRectUnion(contentRect, view.frame);
+        }
+        scrollingSelector.contentSize = contentRect.size
+        
         
         var titleLabel = UILabel()
         titleLabel.text = "Select a Label (optional)"
